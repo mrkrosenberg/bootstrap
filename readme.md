@@ -1,12 +1,20 @@
 <!--
-Market: SF
+Created by: Ilias Tsangaris
+Adapted by: Zeb Girouard
+Market: DEN
 -->
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
 #Bootstrap
 
-## Why is this important?
+<!--Hook: https://twitter.com/
+	http://www.angelfire.com/ny4/BungalowBill/
+	Which of these do you like more?
+	With Twitter Bootstrap, we can "stand on the shoulders of giants", and not have to worry about crafting our basic HTML page into a modern, eye-pleasing page all by ourselves.
+-->	
+
+## Why is this important? (5 min)
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
@@ -28,8 +36,9 @@ Bootstrap is a **library of CSS classes** that helps make any old site look nice
 - Write custom HTML & CSS
 - Include external stylesheets
 
+<!-- CFU: Fist-to-five how do we feel about these? -->
 
-##Intro to Bootstrap
+##Intro to Bootstrap (5 min)
 
 * [Bootstrap](http://getbootstrap.com/) is a **front-end framework** created by a small team of developers at Twitter and maintained by a much larger community of contributors.
 * The framework consists of one main CSS file, an optional theme CSS file, and a main JS file.
@@ -59,7 +68,7 @@ Bootstrap comes with a ton of features, including:
 * [Bloomberg](http://www.bloomberg.com/)
 * [CodeAcademy](https://www.codecademy.com/)
 
-##What is Class-based CSS?
+##What is Class-based CSS? (5 min)
 > Discussion, challenge, then demonstration
 
 Create modular classes that *encapsulate* a certain behavior and name them semantically.
@@ -90,7 +99,7 @@ How would you style CSS for these elements?
 
 
 
-##Including Bootstrap with HTML
+##Including Bootstrap with HTML (5 min)
 > Demonstration, then challenge
 
 * To use Bootstrap, we need to include Bootstrap's CSS and Javascript libraries (+ or - an optional Bootstrap-Theme CSS file).
@@ -121,7 +130,7 @@ How would you style CSS for these elements?
 
 </details>
 
-##What is Responsive Design?
+##What is Responsive Design? (5 min)
 > Discussion
 
 "Responsive web design (RWD) is an approach to web design aimed at crafting sites to provide an optimal viewing and interaction experience— easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from desktop computer monitors to laptops to cellphones).
@@ -131,7 +140,7 @@ A site designed with RWD adapts the layout to the viewing environment by using f
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design)
 
 
-##Responsive Grid System (aka Columns of Craziness)
+##Responsive Grid System (aka Columns of Craziness) (25 min)
 > Discussion —> Demonstration —> Challenge
 
 * Columns are written in the following format as a class attribute: `col-(breakpoint)-(offset)`
@@ -239,7 +248,7 @@ Using the bootstrap grid, make a grid that is 3 Columns on Tablet (sm), Laptop (
 
 For other examples, check out the [Bootstrap docs](http://getbootstrap.com/css/#grid)  
 
-##Offsets & Nesting
+##Offsets & Nesting (5 min)
 
 You can also offset and nest your columns. When you offset a column, you add a column of whitespace and push the column to the right.  Example:
 
@@ -269,7 +278,7 @@ Here is an example of nesting columns (putting one row inside another)
  </div>
 ```
 
-##Typography
+##Typography (10 min)
 For a complete list: [Bootstrap Typography classes](http://getbootstrap.com/css/#type)
 
 To align text, use these classes.  
@@ -332,7 +341,7 @@ Some examples:
 - [Modals](http://getbootstrap.com/javascript/#modals)
 - [Carousels](http://getbootstrap.com/javascript/#carousel)
 
-###Challenge: Choose your own adventure
+###Challenge: Choose your own adventure (10 min)
 
 Pick some aspect of Bootstrap that interests you. Spend 5-10 minutes learning how it works and be prepared to share it with the rest of the class.
 
