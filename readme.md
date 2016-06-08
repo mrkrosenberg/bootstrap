@@ -292,7 +292,7 @@ More useful typography classes...
 ```
 
 ####Icons
-Bootstrap comes with a set of icons that can be included in your page using the `<i></i>` tag. Check out these icons [here](http://getbootstrap.com/components/#glyphicons)
+Bootstrap comes with a set of icons that can be included in your page using the `<i></i>` tag. Check out these icons [here](http://getbootstrap.com/components/#glyphicons).  Just assign a class the your `<i></i>` tag with the name of the icon you want.
 
 ####Buttons
 Bootstrap provides a wide selection of button sizes and colors.  Button classes can be applied not just to `<button>` elements, but also `<a>` and `<input>` elements
