@@ -184,7 +184,7 @@ We can also create the typical two column layout (main content area + sidebar):
 
 * You then use the above choices to determine the exact class you will add to an element in the row (bootstrap has them all built in).
 
-For example the class: `col-lg-3` will take up `3/12` of the space from `992px` to `1199px`. Feel free to add more classes to the same element to change how it will behave at other screen sizes. Let's checkout some more examples... 
+For example the class: `col-lg-3` will take up `3/12` of the space on screens from `992px` to `1199px`. Feel free to add more classes to the same element to change how it will behave at other screen sizes. Let's checkout some more examples... 
 
 Here's an example of a two-column layout that spans the width of the page.  Notice that the widths of the two columns add up to 12.  The column content of any row must always be ≤12.
 
