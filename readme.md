@@ -174,11 +174,12 @@ We can also create the typical two column layout (main content area + sidebar):
   ```
   
 * Then select what screen size we'll want it to display on: 
-  - `col-xs` < 768px (e.g. smartphones)
-  - `col-sm` ≥ 992px (e.g. tablets)
-  - `col-md` ≥ 1200px (e.g. laptops, desktops)
-  - `col-lg` ≥ 1200px (e.g. large desktops, smart TVs)
-
+  - `col-xs` < 544px (e.g. smartphones)
+  - `col-sm` ≥ 544px (e.g. tablets)
+  - `col-md` ≥ 768px (e.g. laptops, desktops)
+  - `col-lg` ≥ 992px (e.g. large desktops)
+  - `col-xl` ≥ 1200px (e.g. smart TVs)
+  
 * Pick a fraction of `12` that will determine how much of the row it will take up.
 
 * You then use the above choices to determine the exact class you will add to an element in the row (bootstrap has them all built in).
