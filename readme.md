@@ -212,6 +212,11 @@ What will this code do?
  </div>
 ```
 
+* The way that Bootstrap works is to dynamically reduce column size according to the window size.
+* To be mobile (and tablet!) friendly, the columns will break into a stack layout after a minimum width is detected.
+* The breakpoints you can select in your columns control at which point this happens.
+* Check out their [documentation](http://getbootstrap.com/css/#grid) here to see what these breakpoints are in terms of size.
+* Let's test it!
 
 ###Challenge: Grid it
 
@@ -235,12 +240,6 @@ Using the bootstrap grid, make a grid that is 3 Columns on Tablet (sm), Laptop (
 For other examples, check out the [Bootstrap docs](http://getbootstrap.com/css/#grid)  
 
 ##Offsets & Nesting
-* The way that Bootstrap works is to dynamically reduce column size according to the window size.
-* To be mobile (and tablet!) friendly, the columns will break into a stack layout after a minimum width is detected.
-* The breakpoints you can select in your columns control at which point this happens.
-* Check out their [documentation](http://getbootstrap.com/css/#grid) here to see what these breakpoints are in terms of size.
-* Let's test it!
-
 
 You can also offset and nest your columns. When you offset a column, you add a column of whitespace and push the column to the right.  Example:
 
