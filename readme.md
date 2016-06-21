@@ -183,11 +183,10 @@ We can also create the typical two column layout (main content area + sidebar):
   ```
   
 * Then select what screen size we'll want it to display on: 
-  - `col-xs` < 544px (e.g. smartphones)
-  - `col-sm` ≥ 544px (e.g. tablets)
-  - `col-md` ≥ 768px (e.g. laptops, desktops)
-  - `col-lg` ≥ 992px (e.g. large desktops)
-  - `col-xl` ≥ 1200px (e.g. smart TVs)
+  - `col-xs` < 768px (e.g. smartphones)
+  - `col-sm` ≥ 768px (e.g. tablets)
+  - `col-md` ≥ 992px (e.g. laptops, desktops)
+  - `col-lg` ≥ 1200px (e.g. large desktops)
   
 * Pick a fraction of `12` that will determine how much of the row it will take up.
 
