@@ -24,17 +24,17 @@ Bootstrap is a **library of CSS classes** that helps make any old site look nice
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-* Implement class-based CSS
-* Require Bootstrap into your project
-* Use and build a grid system
-* Design HTML pages with the aid of Bootstrap & mockups
+* **Implement** class-based CSS
+* **Require** Bootstrap into your project
+* **Use** and **build** a grid system
+* **Design** HTML pages with the aid of Bootstrap & mockups
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-- Write custom HTML & CSS
-- Include external stylesheets
+- **Write** custom HTML & CSS
+- **Include** external stylesheets
 
 <!-- CFU: Fist-to-five how do we feel about these? -->
 
