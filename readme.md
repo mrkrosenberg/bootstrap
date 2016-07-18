@@ -354,3 +354,7 @@ Bootstrap demonstrates good practices in terms of exemplifying class-based CSS a
 - [Skeleton](http://getskeleton.com/) - a lovely, minimal, unopinionated CSS library
 - [Materialize](http://materializecss.com/) - front-end framework based on "material design"
 - [Hipster Ipsum](http://hipsum.co/) - Dummy placeholder "hipster" text
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
