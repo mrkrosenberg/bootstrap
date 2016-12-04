@@ -171,11 +171,11 @@ You'll always want to follow this format - Bootstrap does a lot of fancy math to
 
 ##Bootstrap Sandbox (10 min)
 
-Fork this repo and look at the `sample-project` directory - inside is a sample HTML page with a proper grid system set up. Squish the screen and see how the grid breaks to work on smaller screens! Let's take some time to play with the values. We'll be adjusting the two values in the columns - the grid size, an d
+Fork this repo and look at the `sample-project` directory - inside is a sample HTML page with a proper grid system set up. Squish the screen and see how the grid breaks to work on smaller screens! Let's take some time to play with the values. We'll be adjusting the two values in the columns - the grid column size, and grid screen size.
 
-#### Grid sizing
+#### Column sizing
 
-Why 12? For starters, 12 is divisible by 2, 3, 4, and 6 (meaning we can have columns that are: half-width, third-width, quarter-width, and sixth-width - aka 50%, ~33.3%, 25%, and ~16.7%):
+12 is a magic number - it's divisible by 2, 3, 4, and 6 (meaning we can have columns that are: half-width, third-width, quarter-width, and sixth-width - aka 50%, ~33.3%, 25%, and ~16.7%):
 
     6 + 6                                           = 12
     4 + 4 + 4                                       = 12
@@ -188,10 +188,10 @@ So for a  typical two column layout (main content area + sidebar):
   ```html
    <div class="row">
      <div class="col-md-8">
-       <p>I'm a medium-sized column</p>
+       I'm a big column
       </div>
      <div class="col-md-4">
-       <p>Me too! We have SO much in common</p>
+       I'm just a sidebar
      </div>
    </div>
   ```
@@ -213,7 +213,7 @@ For a no-fuss implementation, you can set your entire grid up with `col-md` and 
 ```html
    <div class="col-xs-12 col-sm-12 col-md-6 cold-lg-4">Totally fine!</div>
 ```
-The above example will look occupy a different number of columns depending on the screensize:
+The above example will occupy a different number of columns depending on the screensize:
 
   - < 768px = 12 columns
   - ≥ 768px = 12 columns
@@ -235,7 +235,7 @@ That being said - what will this code do?
 
 ###Challenge: Grid it
 
-Using the bootstrap grid, make a grid that is 3 Columns on Tablet (sm), Laptop (md), and Desktop (lg), 1 Column on Mobile(xs).
+Using the bootstrap grid, make a grid that is 4 Columns on Tablet (sm), Laptop (md), and Desktop (lg), 12 Column on Mobile(xs).
 
 <details><summary>Sample code</summary>
 
@@ -343,11 +343,12 @@ Bootstrap allows you to incorporate interactive behavior into your page with Jav
 
 Some examples:
 
-- [Responsive Nav bars](http://getbootstrap.com/components/#navbar)
 - [Dropdowns](http://getbootstrap.com/javascript/#dropdowns)
+- [Responsive Nav bars](http://getbootstrap.com/components/#navbar)
 - [Popovers](http://getbootstrap.com/javascript/#popovers)
 - [Modals](http://getbootstrap.com/javascript/#modals)
 - [Carousels](http://getbootstrap.com/javascript/#carousel)
+
 
 ###Challenge: Choose your own adventure (10 min)
 
