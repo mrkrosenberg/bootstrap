@@ -156,6 +156,8 @@ Many browsers still assume websites are not designed to be responsive, and will 
 
 Arguably, Bootstrap's greatest contribtion to RWD is it's Responsive Grid System. It allows your entire page (or any HTML element, for that matter) to operate as a 12-column grid. This is also a common design standard, making your work with designers all the easier.
 
+![Bootstrap Grid System](https://dzone.com/storage/temp/891125-dzone1.jpg)
+
 > The grid system is simple in concept, but has a lot of depth to it - luckily Boostrap has great documentation on it, if you feel the need to investigate: [http://getbootstrap.com/css/#grid](http://getbootstrap.com/css/#grid)
 
 For a page-level grid - the most common implementation - you'll need 3 HTML elements, with 3 corresponding Bootstrap classes: 
