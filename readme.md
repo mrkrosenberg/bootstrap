@@ -152,7 +152,7 @@ Many browsers still assume websites are not designed to be responsive, and will 
 ![Do you trust me?](http://i.imgur.com/NulRYmB.gif)
 
 
-##Bootstrap and the Responsive Grid System (25 min)
+##Bootstrap and the Responsive Grid System (15 min)
 
 Arguably, Bootstrap's greatest contribtion to RWD is it's Responsive Grid System. It allows your entire page (or any HTML element, for that matter) to operate as a 12-column grid. This is also a common design standard, making your work with designers all the easier.
 
@@ -170,20 +170,13 @@ For a page-level grid - the most common implementation - you'll need 3 HTML elem
 
 You'll always want to follow this format - Bootstrap does a lot of fancy math to the margins based on the parent container, so skipping one of the above 3 elements will result in columns that overlap or spill out of their containers. 
 
-Fork this repo and look at the `sample-project` directory - inside is a sample HTML page with a proper grid system set up. Squish the screen and see how the grid breaks to work on smaller screens! Take some time to play with the values.
+##Bootstrap Sandbox (10 min)
 
+Fork this repo and look at the `sample-project` directory - inside is a sample HTML page with a proper grid system set up. Squish the screen and see how the grid breaks to work on smaller screens! Let's take some time to play with the values. We'll be adjusting the two values in the columns - the grid size, an d
 
-Bootstrap's grid system is based on the idea that a page layout for any given screen size is represented with 12 fluid **columns**.  Columns are always horizontally contained in **rows**, which in turn are contained inside of the previously mentioned `container` (container > row > column). But why 12?
+#### Grid sizing
 
-#### 12 is the best number
-
-12 is divisible by 2, 3, 4, and 6 (meaning we can have columns that are: half-width, third-width, quarter-width, and sixth-width aka 50%, ~33.3%, 25%, and ~16.7%):
-
-    12/2  = 6
-    12/3  = 4
-    12/4  = 3
-    12/6  = 2
-    12/12 = 1
+Why 12? For starters, 12 is divisible by 2, 3, 4, and 6 (meaning we can have columns that are: half-width, third-width, quarter-width, and sixth-width - aka 50%, ~33.3%, 25%, and ~16.7%):
 
     6 + 6                                           = 12
     4 + 4 + 4                                       = 12
@@ -191,60 +184,55 @@ Bootstrap's grid system is based on the idea that a page layout for any given sc
     2 + 2 + 2 + 2 + 2 + 2                           = 12
     1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1   = 12
 
-We can also create the typical two column layout (main content area + sidebar):
-
-    8 + 4                                           = 12
-    9 + 3                                           = 12
-
-* To use the gridsystem we must first have a row: 
+So for a  typical two column layout (main content area + sidebar):
 
   ```html
-   <div class="row"> ... </div>
+   <div class="row">
+     <div class="col-md-8">
+       <p>I'm a medium-sized column</p>
+      </div>
+     <div class="col-md-4">
+       <p>Me too! We have SO much in common</p>
+     </div>
+   </div>
   ```
+  Because:
   
-* Then select what screen size we'll want it to display on: 
+  8 + 4                                           = 12
+
+#### Screen Sizing
+
+Next, we'll select what screen size we'll want it to display on: 
+
   - `col-xs` < 768px (e.g. smartphones)
   - `col-sm` ≥ 768px (e.g. tablets)
   - `col-md` ≥ 992px (e.g. laptops, desktops)
   - `col-lg` ≥ 1200px (e.g. large desktops)
+
+For a no-fuss implementation, you can set your entire grid up with `col-md` and Bootstrap will be able to guess the rest - for both larger and smaller screens. However, you might want to make more specific declarations based on screensize - for this, you can use as many screen size declarations as you like:
+
+```html
+   <div class="col-xs-12 col-sm-12 col-md-6 cold-lg-4">Totally fine!</div>
+```
+The above example will look occupy a different number of columns depending on the screensize:
+
+  - < 768px = 12 columns
+  - ≥ 768px = 12 columns
+  - ≥ 992px = 6 columns
+  - ≥ 1200px = 4 columns
   
-* Pick a fraction of `12` that will determine how much of the row it will take up.
-
-* You then use the above choices to determine the exact class you will add to an element in the row (bootstrap has them all built in).
-
-For example the class: `col-lg-3` will take up `3/12` of the space on screens from `992px` to `1199px`. Feel free to add more classes to the same element to change how it will behave at other screen sizes. Let's checkout some more examples... 
-
-Here's an example of a two-column layout that spans the width of the page.  Notice that the widths of the two columns add up to 12.  The column content of any row must always be ≤12.
-
-```html
- <div class="row">
-   <div class="col-md-6">
-     <p>I'm a medium-sized column</p>
-    </div>
-   <div class="col-md-6">
-     <p>Me too! We have SO much in common</p>
-   </div>
- </div>
-```
-
-What will this code do?
+That being said - what will this code do?
 
 ```html
  <div class="row">
    <div class="col-sm-12 col-md-6">
-     <p>I take up the entire space when the screen is small, but share it when there's more room.</p>
+     <p>Column 1</p>
     </div>
    <div class="col-sm-12 col-md-6">
-     <p>Samesies...</p>
+     <p>Column 2</p>
    </div>
  </div>
 ```
-
-* The way that Bootstrap works is to dynamically reduce column size according to the window size.
-* To be mobile (and tablet!) friendly, the columns will break into a stack layout after a minimum width is detected.
-* The breakpoints you can select in your columns control at which point this happens.
-* Check out their [documentation](http://getbootstrap.com/css/#grid) here to see what these breakpoints are in terms of size.
-* Let's test it!
 
 ###Challenge: Grid it
 
@@ -264,9 +252,6 @@ Using the bootstrap grid, make a grid that is 3 Columns on Tablet (sm), Laptop (
 </details>
 
 
-
-For other examples, check out the [Bootstrap docs](http://getbootstrap.com/css/#grid)  
-
 ##Offsets & Nesting (5 min)
 
 You can also offset and nest your columns. When you offset a column, you add a column of whitespace and push the column to the right.  Example:
@@ -274,8 +259,8 @@ You can also offset and nest your columns. When you offset a column, you add a c
 ```html
  <div class="row">
    <div class="col-md-3 col-md-offset-3">
-     <p>This column occupies 1/4 of the page width and is moved to the right 
-     by 1/4 of the page width</p>
+     This column occupies 1/4 of the page width and is moved to the right 
+     by 1/4 of the page width
    </div>
  </div>
 ```
@@ -297,10 +282,15 @@ Here is an example of nesting columns (putting one row inside another)
  </div>
 ```
 
-##Typography (10 min)
+## Utility Classes (10 min)
+
+The grid system is just the tip of the iceberg! Bootstrap also offers a wide variety of Utility Classes that can be applied to elements. Once again, I recommend going through the documentation to discover the full range of tools available:
+[http://getbootstrap.com/css/](http://getbootstrap.com/css/)
+
+###Typography 
 For a complete list: [Bootstrap Typography classes](http://getbootstrap.com/css/#type)
 
-To align text, use these classes.  
+To align text, use these classes.
 
 ```html
  <p class="text-left">Left aligned text.</p>
