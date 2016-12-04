@@ -69,11 +69,11 @@ Bootstrap comes with a ton of features, including:
 * [CodeAcademy](https://www.codecademy.com/)
 
 ##What is Class-based CSS? (5 min)
-> Discussion, challenge, then demonstration
+<! -- Discussion, challenge, then demonstration -- >
 
-Create modular classes that *encapsulate* a certain behavior and name them semantically.
+When we create modular classes in CSS, we make style rules that *encapsulate* a certain behavior and name them semantically - that is, very clearly and simply. This way, they can be reused multiple times on different elements.
 
-How would you style CSS for these elements?
+For instance - how would you style CSS for these elements?
 
 * `.shout` — uppercase the text inside the element
 * `.shadow` — add a drop-text to text inside the element
@@ -102,12 +102,15 @@ How would you style CSS for these elements?
 ##Including Bootstrap with HTML (5 min)
 > Demonstration, then challenge
 
-* To use Bootstrap, we need to include Bootstrap's CSS and Javascript libraries (+ or - an optional Bootstrap-Theme CSS file).
-* We also need to include jQuery, as Bootstrap's JS plug-ins depend on it.  
-* There are a few different ways to accomplish this, listed below. In this class, we'll keep it simple and stick with the CDN.
+* To use Bootstrap, we need to include Bootstrap's CSS and Javascript libraries.
+* We also need to include jQuery, as Bootstrap's JS plug-ins depend on it.
+
+There are a few different ways to accomplish this:
 
 1. CDN (Content Delivery Network - someone else hosts the library/framework and you access it via a URL):  [http://getbootstrap.com/getting-started/#download-cdn](http://getbootstrap.com/getting-started/#download-cdn). Where do we include these in our HTML file?
 2. Download the actual CSS and JS files and link to them on your local computer - better for offline/local development.
+
+In this class, we'll keep it simple and stick with the CDN.
 
 <details><summary>Sample code</summary>
 
@@ -131,27 +134,42 @@ How would you style CSS for these elements?
 </details>
 
 ##What is Responsive Design? (5 min)
-> Discussion
 
-"Responsive web design (RWD) is an approach to web design aimed at crafting sites to provide an optimal viewing and interaction experience— easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from desktop computer monitors to laptops to cellphones).
+Responsive web diesgn (RWD) is both a philosophy and a practice:
 
-A site designed with RWD adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images, etc..."
+1. RWD is the *philosophy* that websites should adapt to whatever size screen their on - from mobile all the way up to large desktop screens - and display optimally on them, without having to pinch/zoom/scroll unnecessarily. 
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design)
+2. RWD is the *practice* of building web sites that scale to their environment, using Media Queries, CSS Frameworks like Boostrap, and other techniques.
+
+##Responsive Meta Tag
+
+There's one important first step to a responsive website - and that's the Responsive Meta Tag. Be sure to place this in the head of your HTML document:
+
+`<meta name="viewport" content="width=device-width, initial-scale=1">`
+
+Many browsers still assume websites are not designed to be responsive, and will try to "guess" what you want the page to look like - this will involve lots of incorrect zooming and text-sizing. This meta tag tells your browser to cut it out and trust you.
+
+![Do you trust me?](http://i.imgur.com/NulRYmB.gif)
 
 
-##Responsive Grid System (aka Columns of Craziness) (25 min)
-> Discussion —> Demonstration —> Challenge
+##Bootstrap and the Responsive Grid System (25 min)
 
-* Columns are written in the following format as a class attribute: `col-(breakpoint)-(offset)`
-* For example: `col-sm-4`
-* Columns are often wrapped into an element with a class of `row` or `container`.
+Arguably, Bootstrap's greatest contribtion to RWD is it's Responsive Grid System. It allows your entire page (or any HTML element, for that matter) to operate as a 12-column grid. This is also a common design standard, making your work with designers all the easier.
 
-####Start with a container
-To ensure all your Bootstrap styles behave properly, always put your content inside an element with a class "container" (usually `<div class="container">`). This will center your content and leave a small margin on the sides of the page. If you would like to use the full width of the screen (no margin) use `class="container-fluid"`
+> The grid system is simple in concept, but has a lot of depth to it - luckily Boostrap has great documentation on it, if you feel the need to investigate: [http://getbootstrap.com/css/#grid](http://getbootstrap.com/css/#grid)
 
-####Page layout using the Grid System
-![grid](https://raw.githubusercontent.com/sf-wdi-26/modules/master/w02/d03/m3-bootstrap/imgs/grid.png)
+For a page-level grid - the most common implementation - you'll need 3 HTML elements, with 3 corresponding Bootstrap classes: 
+
+1. `.container` or `.container-fluid` is the outer container of your page or section. `.container-fluid` will allow your grid to extend the full width of the screen or parent container, whereas `.container` will contrain it to a centered "strip" based on the screen size.
+
+2. `.row` represents a row of grid columns - this is similar to a `<tr>` in a table, or a row in a spreadsheet. 
+
+3. `.col-x-y` will be placed on each grid element, with 'x' being filled on the screen size you're targeting, and 'y' being filled in by the number of columns (out of a total of 12) you want the element to occupy. For example - `col-sm-6` declares that on small screens, the element will take up 6 of 12 columns or half of the grid. 
+
+You'll always want to follow this format - Bootstrap does a lot of fancy math to the margins based on the parent container, so skipping one of the above 3 elements will result in columns that overlap or spill out of their containers. 
+
+Fork this repo and look at the `sample-project` directory - inside is a sample HTML page with a proper grid system set up. Squish the screen and see how the grid breaks to work on smaller screens! Take some time to play with the values.
+
 
 Bootstrap's grid system is based on the idea that a page layout for any given screen size is represented with 12 fluid **columns**.  Columns are always horizontally contained in **rows**, which in turn are contained inside of the previously mentioned `container` (container > row > column). But why 12?
 
