@@ -69,7 +69,6 @@ Bootstrap comes with a ton of features, including:
 * [CodeAcademy](https://www.codecademy.com/)
 
 ##What is Class-based CSS? (5 min)
-<! -- Discussion, challenge, then demonstration -- >
 
 When we create modular classes in CSS, we make style rules that *encapsulate* a certain behavior and name them semantically - that is, very clearly and simply. This way, they can be reused multiple times on different elements.
 
