@@ -211,7 +211,7 @@ Next, we'll select what screen size we'll want it to display on:
 For a no-fuss implementation, you can set your entire grid up with `col-md` and Bootstrap will be able to guess the rest - for both larger and smaller screens. However, you might want to make more specific declarations based on screensize - for this, you can use as many screen size declarations as you like:
 
 ```html
-   <div class="col-xs-12 col-sm-12 col-md-6 cold-lg-4">Totally fine!</div>
+   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">Totally fine!</div>
 ```
 The above example will occupy a different number of columns depending on the screensize:
 
