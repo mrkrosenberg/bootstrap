@@ -38,7 +38,7 @@ Bootstrap is a **library of CSS classes** that helps make any old site look nice
 
 <!-- CFU: Fist-to-five how do we feel about these? -->
 
-##Intro to Bootstrap (5 min)
+## Intro to Bootstrap (5 min)
 
 * [Bootstrap](http://getbootstrap.com/) is a **front-end framework** created by a small team of developers at Twitter and maintained by a much larger community of contributors.
 * The framework consists of one main CSS file, an optional theme CSS file, and a main JS file.
@@ -62,13 +62,13 @@ Bootstrap comes with a ton of features, including:
 - Icons
 - & more!
 
-##Notable Sites Using Bootstrap
+## Notable Sites Using Bootstrap
 
 * [NBA.com](http://www.nba.com/)
 * [Bloomberg](http://www.bloomberg.com/)
 * [CodeAcademy](https://www.codecademy.com/)
 
-##What is Class-based CSS? (5 min)
+## What is Class-based CSS? (5 min)
 
 When we create modular classes in CSS, we make style rules that *encapsulate* a certain behavior and name them semantically - that is, very clearly and simply. This way, they can be reused multiple times on different elements.
 
@@ -98,7 +98,7 @@ For instance - how would you style CSS for these elements?
 
 
 
-##Including Bootstrap with HTML (5 min)
+## Including Bootstrap with HTML (5 min)
 > Demonstration, then challenge
 
 * To use Bootstrap, we need to include Bootstrap's CSS and Javascript libraries.
@@ -132,7 +132,7 @@ In this class, we'll keep it simple and stick with the CDN.
 
 </details>
 
-##What is Responsive Design? (5 min)
+## What is Responsive Design? (5 min)
 
 Responsive web diesgn (RWD) is both a philosophy and a practice:
 
@@ -140,7 +140,7 @@ Responsive web diesgn (RWD) is both a philosophy and a practice:
 
 2. RWD is the *practice* of building web sites that scale to their environment, using Media Queries, CSS Frameworks like Boostrap, and other techniques.
 
-##Responsive Meta Tag
+## Responsive Meta Tag
 
 There's one important first step to a responsive website - and that's the Responsive Meta Tag. Be sure to place this in the head of your HTML document:
 
@@ -151,7 +151,7 @@ Many browsers still assume websites are not designed to be responsive, and will 
 ![Do you trust me?](http://i.imgur.com/NulRYmB.gif)
 
 
-##Bootstrap and the Responsive Grid System (15 min)
+## Bootstrap and the Responsive Grid System (15 min)
 
 Arguably, Bootstrap's greatest contribtion to RWD is it's Responsive Grid System. It allows your entire page (or any HTML element, for that matter) to operate as a 12-column grid. This is also a common design standard, making your work with designers all the easier.
 
@@ -169,7 +169,7 @@ For a page-level grid - the most common implementation - you'll need 3 HTML elem
 
 You'll always want to follow this format - Bootstrap does a lot of fancy math to the margins based on the parent container, so skipping one of the above 3 elements will result in columns that overlap or spill out of their containers. 
 
-##Bootstrap Sandbox (10 min)
+## Bootstrap Sandbox (10 min)
 
 Fork this repo and look at the `sample-project` directory - inside is a sample HTML page with a proper grid system set up. Squish the screen and see how the grid breaks to work on smaller screens! Let's take some time to play with the values. We'll be adjusting the two values in the columns - the grid column size, and grid screen size.
 
@@ -233,7 +233,7 @@ That being said - what will this code do?
  </div>
 ```
 
-###Challenge: Grid it
+### Challenge: Grid it
 
 Using the bootstrap grid, make a grid that is 4 Columns on Tablet (sm), Laptop (md), and Desktop (lg), 12 Column on Mobile(xs).
 
@@ -251,7 +251,7 @@ Using the bootstrap grid, make a grid that is 4 Columns on Tablet (sm), Laptop (
 </details>
 
 
-##Offsets & Nesting (5 min)
+## Offsets & Nesting (5 min)
 
 You can also offset and nest your columns. When you offset a column, you add a column of whitespace and push the column to the right.  Example:
 
@@ -286,7 +286,7 @@ Here is an example of nesting columns (putting one row inside another)
 The grid system is just the tip of the iceberg! Bootstrap also offers a wide variety of Utility Classes that can be applied to elements. Once again, I recommend going through the documentation to discover the full range of tools available:
 [http://getbootstrap.com/css/](http://getbootstrap.com/css/)
 
-###Typography 
+### Typography 
 For a complete list: [Bootstrap Typography classes](http://getbootstrap.com/css/#type)
 
 To align text, use these classes.
@@ -308,10 +308,10 @@ More useful typography classes...
  <p class="text-capitalize">Capitalized text.</p>
 ```
 
-####Icons
+#### Icons
 Bootstrap comes with a set of icons that can be included in your page using the `<i></i>` tag. Check out these icons [here](http://getbootstrap.com/components/#glyphicons).  Just assign a class the your `<i></i>` tag with the name of the icon you want.
 
-####Buttons
+#### Buttons
 Bootstrap provides a wide selection of button sizes and colors.  Button classes can be applied not just to `<button>` elements, but also `<a>` and `<input>` elements
 
 Sometimes you need to provide multiple classes to an element in order for Bootstrap to style it.  The button classes are an example of this:
@@ -332,13 +332,13 @@ Sometimes you need to provide multiple classes to an element in order for Bootst
 ... and so on.  See the [docs](http://getbootstrap.com/css/#buttons) for a comprehensive list of options.  Note you can add a third class denoting size to any of the above: `.btn-lg`, `.btn-sm`, `.btn-xs`
 
 
-###Images 
+### Images 
 Bootstrap helps you format images using `class="img-rounded"` (rounds the corners), `class="img-circle"` (makes the image a circle) and `class="img-thumbnail"` (adds a border). You can also add a `class="img-responsive"` to your image to make it scale well when the screen size changes (this sets its max-width to 100% of its parent element and the height to auto for maintaining aspect)
 
-###Forms
+### Forms
 Bootstrap is also very helpful when you need to style your forms. All textual `<input>`, `<textarea>`, and `<select>` elements with `class="form-control"` are set to width: 100% by default. Wrap labels and their associated controls (inputs) in `class="form-group"` for optimum spacing. 
 
-###Javascript plug-ins
+### Javascript plug-ins
 Bootstrap allows you to incorporate interactive behavior into your page with Javascript plug-ins.  While you would ultimately have to write some JS in order for these components to provide actual functionality within the application, you don't have to write JS if you're simply mocking up a UI.
 
 Some examples:
@@ -350,15 +350,15 @@ Some examples:
 - [Carousels](http://getbootstrap.com/javascript/#carousel)
 
 
-###Challenge: Choose your own adventure (10 min)
+### Challenge: Choose your own adventure (10 min)
 
 Pick some aspect of Bootstrap that interests you. Spend 5-10 minutes learning how it works and be prepared to share it with the rest of the class.
 
-##Closing Thoughts
+## Closing Thoughts
 
 Bootstrap demonstrates good practices in terms of exemplifying class-based CSS and introducing the concept of a grid-system. It is useful for most projects where style is somewhat important but not the central to the product.
 
-##Additional Resources
+## Additional Resources
 
 - [Foundation](http://foundation.zurb.com/) - another CSS-library, similar to Bootstrap
 - [Skeleton](http://getskeleton.com/) - a lovely, minimal, unopinionated CSS library
