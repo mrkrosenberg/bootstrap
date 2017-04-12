@@ -6,7 +6,7 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-#Bootstrap
+# Bootstrap
 
 <!--Hook: https://twitter.com/
 	http://www.angelfire.com/extreme/xtremesportz/index.html
@@ -72,13 +72,13 @@ Bootstrap comes with a ton of features, including:
 
 When we create modular classes in CSS, we make style rules that *encapsulate* a certain behavior and name them semantically - that is, very clearly and simply. This way, they can be reused multiple times on different elements.
 
-For instance - how would you style CSS for these elements?
+For instance:
 
-* `.shout` — uppercase the text inside the element
-* `.shadow` — add a drop-text to text inside the element
-* `.invert` — flip an element upside-down
+* `.shout` — will uppercase the text inside the element
+* `.shadow` — will add a text-shadow to text inside the element
+* `.invert` — will flip an element upside-down
 
-<details><summary>Example solution</summary>
+<details><summary>The CSS for these classes look like this:</summary>
 
 ```css
 .shout {
@@ -99,7 +99,6 @@ For instance - how would you style CSS for these elements?
 
 
 ## Including Bootstrap with HTML (5 min)
-> Demonstration, then challenge
 
 * To use Bootstrap, we need to include Bootstrap's CSS and Javascript libraries.
 * We also need to include jQuery, as Bootstrap's JS plug-ins depend on it.
