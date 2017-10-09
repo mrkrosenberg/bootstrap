@@ -121,7 +121,7 @@ In this class, we'll keep it simple and stick with the CDN.
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 <body>
 	<!--html here-->
@@ -156,7 +156,7 @@ Arguably, Bootstrap's greatest contribtion to RWD is it's Responsive Grid System
 
 ![Bootstrap Grid System](https://dzone.com/storage/temp/891125-dzone1.jpg)
 
-> The grid system is simple in concept, but has a lot of depth to it - luckily Boostrap has great documentation on it, if you feel the need to investigate: [http://getbootstrap.com/css/#grid](http://getbootstrap.com/css/#grid)
+> The grid system is simple in concept, but has a lot of depth to it - luckily Boostrap has great documentation on it, if you feel the need to investigate: [http://getbootstrap.com/css/#grid](https://getbootstrap.com/docs/4.0/layout/grid/)
 
 For a page-level grid - the most common implementation - you'll need 3 HTML elements, with 3 corresponding Bootstrap classes: 
 
@@ -164,7 +164,7 @@ For a page-level grid - the most common implementation - you'll need 3 HTML elem
 
 2. `.row` represents a row of grid columns - this is similar to a `<tr>` in a table, or a row in a spreadsheet. 
 
-3. `.col-x-y` will be placed on each grid element, with 'x' being filled on the screen size you're targeting, and 'y' being filled in by the number of columns (out of a total of 12) you want the element to occupy. For example - `col-sm-6` declares that on small screens, the element will take up 6 of 12 columns or half of the grid. 
+3. `.col-x-y` will be placed on each grid element, with 'x' being filled on the screen size you're targeting, and 'y' being filled in by the number of columns (out of a total of 12) you want the element to occupy. For example - `col-sm-6` declares that on small screens, the element will take up 6 of 12 columns or half of the grid.
 
 You'll always want to follow this format - Bootstrap does a lot of fancy math to the margins based on the parent container, so skipping one of the above 3 elements will result in columns that overlap or spill out of their containers. 
 
@@ -202,10 +202,11 @@ So for a  typical two column layout (main content area + sidebar):
 
 Next, we'll select what screen size we'll want it to display on: 
 
-  - `col-xs` < 768px (e.g. smartphones)
-  - `col-sm` ≥ 768px (e.g. tablets)
-  - `col-md` ≥ 992px (e.g. laptops, desktops)
-  - `col-lg` ≥ 1200px (e.g. large desktops)
+  - `col-xs` < 576px (e.g. small smartphones)
+  - `col-sm` ≥ 576px (e.g. average smartphones)
+  - `col-md` ≥ 768px (e.g. tablets in Portrait)
+  - `col-lg` ≥ 992px (e.g. tablets in landscape and some small laptops)
+  - `col-xl` ≥ 1200px (e.g. laptops/desktops)
 
 For a no-fuss implementation, you can set your entire grid up with `col-md` and Bootstrap will be able to guess the rest - for both larger and smaller screens. However, you might want to make more specific declarations based on screensize - for this, you can use as many screen size declarations as you like:
 
@@ -214,10 +215,10 @@ For a no-fuss implementation, you can set your entire grid up with `col-md` and 
 ```
 The above example will occupy a different number of columns depending on the screensize:
 
-  - < 768px = 12 columns
-  - ≥ 768px = 12 columns
-  - ≥ 992px = 6 columns
-  - ≥ 1200px = 4 columns
+  - < 576px = 12 columns
+  - ≥ 576px = 12 columns
+  - ≥ 768px = 6 columns
+  - ≥ 992px = 4 columns
   
 That being said - what will this code do?
 
@@ -283,10 +284,10 @@ Here is an example of nesting columns (putting one row inside another)
 ## Utility Classes (10 min)
 
 The grid system is just the tip of the iceberg! Bootstrap also offers a wide variety of Utility Classes that can be applied to elements. Once again, I recommend going through the documentation to discover the full range of tools available:
-[http://getbootstrap.com/css/](http://getbootstrap.com/css/)
+[http://getbootstrap.com/docs/4.0/getting-started/introduction/](http://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
 ### Typography 
-For a complete list: [Bootstrap Typography classes](http://getbootstrap.com/css/#type)
+For a complete list: [Bootstrap Typography classes](http://getbootstrap.com/docs/4.0/content/typography/)
 
 To align text, use these classes.
 
@@ -306,9 +307,6 @@ More useful typography classes...
  <p class="text-uppercase">Uppercased text.</p>
  <p class="text-capitalize">Capitalized text.</p>
 ```
-
-#### Icons
-Bootstrap comes with a set of icons that can be included in your page using the `<i></i>` tag. Check out these icons [here](http://getbootstrap.com/components/#glyphicons).  Just assign a class the your `<i></i>` tag with the name of the icon you want.
 
 #### Buttons
 Bootstrap provides a wide selection of button sizes and colors.  Button classes can be applied not just to `<button>` elements, but also `<a>` and `<input>` elements
@@ -337,16 +335,16 @@ Bootstrap helps you format images using `class="img-rounded"` (rounds the corner
 ### Forms
 Bootstrap is also very helpful when you need to style your forms. All textual `<input>`, `<textarea>`, and `<select>` elements with `class="form-control"` are set to width: 100% by default. Wrap labels and their associated controls (inputs) in `class="form-group"` for optimum spacing. 
 
-### Javascript plug-ins
+### Components
 Bootstrap allows you to incorporate interactive behavior into your page with Javascript plug-ins.  While you would ultimately have to write some JS in order for these components to provide actual functionality within the application, you don't have to write JS if you're simply mocking up a UI.
 
 Some examples:
 
-- [Dropdowns](http://getbootstrap.com/javascript/#dropdowns)
-- [Responsive Nav bars](http://getbootstrap.com/components/#navbar)
-- [Popovers](http://getbootstrap.com/javascript/#popovers)
-- [Modals](http://getbootstrap.com/javascript/#modals)
-- [Carousels](http://getbootstrap.com/javascript/#carousel)
+- [Responsive Nav bars](http://getbootstrap.com/docs/4.0/components/navbar/)
+- [Tooltips](http://getbootstrap.com/docs/4.0/components/tooltips/)
+- [Modals](http://getbootstrap.com/docs/4.0/components/modal/)
+- [Carousels](http://getbootstrap.com/docs/4.0/components/carousel/)
+- [Dropdowns](http://getbootstrap.com/docs/4.0/components/dropdowns/)
 
 
 ### Challenge: Choose your own adventure (10 min)
@@ -362,7 +360,6 @@ Bootstrap demonstrates good practices in terms of exemplifying class-based CSS a
 - [Foundation](http://foundation.zurb.com/) - another CSS-library, similar to Bootstrap
 - [Skeleton](http://getskeleton.com/) - a lovely, minimal, unopinionated CSS library
 - [Materialize](http://materializecss.com/) - front-end framework based on "material design"
-- [Hipster Ipsum](http://hipsum.co/) - Dummy placeholder "hipster" text
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
